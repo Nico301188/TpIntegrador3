@@ -27,7 +27,7 @@ const api = async () => {
     server.use("/api/cart", cartRoutes)
     server.use("/api/checkout", checkoutRoutes)
     
-    server.listen(process.env.PORT, () => console.log(`Servidor corriendo en el puerto ${process.env.PORT}`))
+    // server.listen(process.env.PORT, () => console.log(`Servidor corriendo en el puerto ${process.env.PORT}`))
 }
 
 api()
