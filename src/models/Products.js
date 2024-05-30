@@ -42,7 +42,8 @@ const ProductSchema = new Schema({
     },
     imgUrl: {
         type: String,
-        required: true,
+        // required: true,
+        required: false,
     },
     deletedAt: {
         type: Date
