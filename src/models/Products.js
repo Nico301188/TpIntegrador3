@@ -21,14 +21,16 @@ const ProductSchema = new Schema({
         type: String,
         required: true
     },
-    shortDesc: {
+    // shortDesc:
+    sDescription:{
         type: String,
         required: true
     },
-    longDesc: {
+    // longDesc:
+    lDescription: {
         type: String
     },
-    delivery: {
+    freeDeliver: {
         type: Boolean,
         default: false
     },
