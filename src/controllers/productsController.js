@@ -33,9 +33,12 @@ export const createProduct = async (req, res) => {
                 })
         }
 
+        console.log(body)
         const product = await Products.create({
             ...body,
+            
             // para el caso que la imagenes queden alojadas permanentemente en nuestro servidor
+            // imgUrl: `${process.env.BASE_URL}/public/${file.filename}`
             imgUrl: `${process.env.BASE_URL}/public/${file.filename}`
             // imgUrl: `${process.env.BASE_URL}/images/${image._id}`
         });
