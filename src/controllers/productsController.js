@@ -39,8 +39,8 @@ export const createProduct = async (req, res) => {
             
             // para el caso que la imagenes queden alojadas permanentemente en nuestro servidor
             // imgUrl: `${process.env.BASE_URL}/public/${file.filename}`
-            imgUrl: `${process.env.BASE_URL}/public/${file.filename}`
-            // imgUrl: `${process.env.BASE_URL}/images/${image._id}`
+            // imgUrl: `${process.env.BASE_URL}/public/${file.filename}`
+            imgUrl: `${process.env.BASE_URL}/images/${image._id}`
         });
 
         fs.rm(`./temp/imgs/${file.filename}`, error => {
