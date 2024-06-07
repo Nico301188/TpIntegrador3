@@ -22,3 +22,4 @@ export const createCheckoutPreference = async (req, res) => {
         res.status(500).send("Error con el servidor")
     }
 }
+
