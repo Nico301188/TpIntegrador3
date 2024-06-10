@@ -2,7 +2,7 @@ import express from 'express'
 import { body } from 'express-validator';
 
 import { validationErrorResponse } from '../middlewares/validateResponse.js';
-import { createMessage } from '../controllers/messagesController.js';
+import { createMessage, getMessages } from '../controllers/messagesController.js';
 
 const route = express.Router();
 
@@ -13,5 +13,6 @@ route.post("/", [
     body("body").isString().isLength({ min: 1 }).withMessage("El cuerpo del mensaje es requerido."),
     validationErrorResponse
 ], createMessage)
+.get("/",getMessages)
 
 export default route;

@@ -26,3 +26,22 @@ export const createMessage = async (req, res) => {
             })
     }
 }
+
+export const getMessages = async (req,res)=>{
+    try {
+        const message = await Messages.find( req.query  );
+
+        res.json({
+            ok: true,
+            message
+        })
+
+    } catch (error) {
+        console.log("Ha habido un error al leer el mensaje.")
+        res.status(500)
+            .json({
+                ok: false,
+                msg: "Ha habido un error con el servidor"
+            })
+    }
+}
